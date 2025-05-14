@@ -6,7 +6,7 @@ public class Main {
         int ghoulTearsCount = 0;        //Слезы вурдалака
         int ravenBonesCount = 0;        //Кости ворона
         int dumplingsCount = 0;         //Пельмени(а почему, собственно нет? xD )
-        boolean isTrue = false;
+        boolean isAvailabilityOfIngredients = false;
         //todo реализовать ввод пользователем кол-ва ингредиентов.
         System.out.println("Количество ингредиента 'Жабьи глаза'");
         toadEyesCount = new Scanner(System.in).nextInt();
@@ -26,21 +26,21 @@ public class Main {
         //todo дописать логику программы сюда
         if (toadEyesCount >= 3 && ravenBonesCount >= 1) {
             System.out.println("Элексир зоркости");
-            isTrue = true;
+            isAvailabilityOfIngredients = true;
         }
         if (ravenBonesCount > 1 && dumplingsCount >= 4) {
             System.out.println("Элексир стойкости");
-            isTrue = true;
+            isAvailabilityOfIngredients = true;
         }
         if ((toadEyesCount > 1 && dumplingsCount >= 1) && ghoulTearsCount >= 7) {
             System.out.println("Элексир скрытности");
-            isTrue = true;
+            isAvailabilityOfIngredients = true;
         }
         if ((toadEyesCount >= 4 && dumplingsCount >= 10) && (ghoulTearsCount >= 5 && ravenBonesCount >= 3)) {
             System.out.println("Элексир запретный");
-            isTrue = true;
+            isAvailabilityOfIngredients = true;
         }
-        if (isTrue == false){
+        if (isAvailabilityOfIngredients == false){
             System.out.println("У вас не хватает ингредиентов ни на один элексир. Доставайте оружие из широких штанин" +
                     " и чешите на данж!");
         }
